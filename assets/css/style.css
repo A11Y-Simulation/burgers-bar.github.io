@@ -421,19 +421,37 @@ img {
   opacity: 0;
   transform: translateY(5rem);
 }
+@media (min-width: 48em) {
+  .modal__container {
+    padding: initial;
+    background-color: initial;
+    top: 10rem;
+  }
+}
 .modal__img {
   margin-bottom: 0.75rem;
 }
 .modal__close {
   display: inline-flex;
   background-color: #069C54;
-  border-radius: 0 0.5rem;
+  border-radius: 0 0 0 0.7rem;
   color: #FFFFFF;
   font-size: 1.5rem;
   position: absolute;
   top: 0;
   right: 0;
   cursor: pointer;
+}
+@media (min-width: 48em) {
+  .modal__close {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 48em) {
+  .modal__content {
+    margin: auto;
+    width: 1200px;
+  }
 }
 
 .show-modal {

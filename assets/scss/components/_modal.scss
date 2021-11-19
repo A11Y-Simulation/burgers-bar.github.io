@@ -6,6 +6,7 @@
     &__container {
         position: absolute;
         top: 2.5rem;
+
         padding: 1.3rem;
         background-color: black;
         width: 100%;
@@ -17,22 +18,40 @@
         visibility: hidden;
         opacity: 0;
         transform: translateY(5rem);
+        @include for-desktops{
+            padding: initial;
+            background-color: initial;
+            top: 10rem;
+        }
     }
 
     &__img {
         margin-bottom: .75rem;
+
+       
     }
 
     &__close {
         display: inline-flex;
         background-color: variables.$first-color;
-        border-radius: 0 .5rem;
+        border-radius: 0 0 0 .7rem;
         color: variables.$container-color;
         font-size: 1.5rem;
         position: absolute;
         top: 0;
         right: 0;
         cursor: pointer;
+        @include for-desktops{
+            font-size: 3rem;
+        }
+    }
+
+    &__content{
+        @include for-desktops {
+          margin: auto;
+          width: 1200px;
+            
+        }
     }
 }
 
