@@ -1,0 +1,47 @@
+@use '../abstract/variables';
+
+@import '../abstract/mixins';
+
+.modal {
+    &__container {
+        position: absolute;
+        top: 2.5rem;
+        padding: 1.3rem;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        // overflow: hidden;
+        transition: all .3s;
+        z-index: variables.$z-fixed;
+        border-radius: 0.5rem;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+
+    &__img {
+        margin-bottom: .75rem;
+    }
+
+    &__close {
+        display: inline-flex;
+        background-color: variables.$first-color;
+        border-radius: 0 .5rem;
+        color: variables.$container-color;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+}
+
+.show-modal{
+    visibility: visible;
+    opacity: 1;
+}
+
+.show-modal, .modal__content {
+    transform: translateY(0);
+}
+

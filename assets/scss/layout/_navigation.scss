@@ -1,0 +1,114 @@
+@use '../abstract/variables';
+
+@import '../abstract/mixins';
+
+.bd-container {
+    max-width: 960px;
+    width: calc(100% - 2rem);
+    margin-left: variables.$mb-2;
+    margin-right: variables.$mb-2;
+    @include for-max-desktops{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.bd-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: variables.$z-fixed;
+    background-color: variables.$body-color;
+}
+
+.nav {
+    max-width: 1024px;
+    height: variables.$header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-desktops {
+        height: calc(variables.$header-height + 1.5rem);
+    }
+
+    &__list {
+        @include for-desktops {
+            display: flex;
+        }
+    }
+
+    &__menu {
+        @include for-mobile-tablettes {
+            position: fixed;
+            // top: variables.$header-height; puis changement en -100% pour cacher le menu et le faire apparaître en js
+            top: -100%;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0 1rem;
+            text-align: center;
+            background-color: variables.$body-color;
+            transition: .4s;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+            border-radius: 0 0 1rem 1rem;
+            z-index: variables.$z-fixed;
+        }
+    }
+
+    &__item {
+        margin-bottom: variables.$mb-2;
+
+        @include for-desktops {
+            margin-bottom: 0;
+            margin-left: variables.$mb-5
+        }
+    }
+
+    &__link {
+        color: variables.$text-color;
+        font-weight: variables.$font-medium;
+        transition: .3s;
+
+        &:hover {
+            color: variables.$first-color;
+        }
+    }
+
+    &__logo {
+        color: variables.$text-color;
+        font-weight: variables.$font-medium;
+
+        &:hover {
+            color: variables.$first-color;
+        }
+    }
+
+    &__toggle {
+        color: variables.$text-color;
+        font-weight: variables.$font-medium;
+        font-size: 1.3rem;
+        cursor: pointer;
+
+        @include for-desktops {
+            display: none;
+        }
+    }
+}
+
+// ******************************** VOIR LE MENU ****************************************
+
+.show-menu {
+    top: variables.$header-height;
+}
+
+// ************************ LIEN DU MENU ACTIF ***********************************
+
+.active-link {
+    color: variables.$first-color;
+}

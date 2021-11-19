@@ -1,0 +1,46 @@
+@use '../abstract/variables';
+
+@import '../abstract/mixins';
+
+.about {
+    &__container {
+        @include for-tablettes {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include for-max-desktops{
+        column-gap: 7rem;
+        }
+        }
+    
+
+    &__data {
+        text-align: center;
+
+        @include for-tablettes {
+            text-align: initial;
+        }
+    }
+
+    &__description {
+        margin-bottom: variables.$mb-3;
+    }
+
+    &__img {
+        width: 280px;
+        border-radius: .5rem;
+        justify-self: center;
+
+        @include for-tablettes {
+            width: 380px;
+            order: -1;
+            ;
+        }
+    }
+
+    &__initial {
+        @include for-tablettes {
+            text-align: initial;
+        }
+    }
+
+}

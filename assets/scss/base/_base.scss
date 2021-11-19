@@ -1,0 +1,48 @@
+@use '../abstract/variables';
+
+@import '../abstract/mixins';
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: variables.$header-height 0 0 0;
+    font-family: variables.$body-font;
+    font-size: variables.$normal-font-size;
+    background-color: variables.$body-color;
+    color: variables.$text-color;
+    line-height: 1.6;
+
+    @include for-desktops {
+        margin: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

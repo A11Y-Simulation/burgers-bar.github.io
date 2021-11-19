@@ -1,0 +1,12 @@
+@use '../abstract/variables';
+
+@import '../abstract/mixins';
+
+.change-theme{
+    position: absolute;
+    right: 1rem;
+    top: 1.8rem;
+    color: variables.$text-color;
+    font-size: 1rem;
+    cursor: pointer;
+}

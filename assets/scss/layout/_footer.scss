@@ -1,0 +1,41 @@
+@use '../abstract/variables';
+
+@import '../abstract/mixins';
+
+.footer {
+    &__container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        row-gap: 2rem;
+    }
+
+    &__logo {
+        font-size: variables.$h3-font-size;
+        color: variables.$first-color;
+        font-weight: variables.$font-semi-bold;
+    }
+
+    &__description {
+        display: block;
+        font-size: variables.$small-font-size;
+        margin: .25rem 0 variables.$mb-3;
+    }
+
+    &__social {
+        font-size: 1.5rem;
+        color: variables.$title-color;
+        margin-right: variables.$mb-2;
+    }
+
+    &__title {
+        font-size: variables.$h2-font-size;
+        color: variables.$title-color;
+        margin-bottom: variables.$mb-2;
+    }
+
+    &__copy {
+        text-align: center;
+        font-size: variables.$small-font-size;
+        color: variables.$text-color-light;
+        margin-top: 3.5rem;
+    }
+}
