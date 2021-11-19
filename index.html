@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- *************************************** BOX ICONS ***************************************************** -->
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- *************************************** CSS ***************************************************** -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.svg" />
+
+    <title>Burger Bar</title>
+</head>
+
+<body>
+    <!-- *************************************** SCROLL TOP ***************************************************** -->
+    <a href="#" class="scrolltop scroll-top" id="scroll-top">
+        <i class="bx bxs-chevron-up scrolltop__icon"></i>
+    </a>
+    <!-- *************************************** HEADER ***************************************************** -->
+    <header class="l-header scroll-header" id="header" role="banner">
+        <nav class="nav bd-container" role="navigation">
+            <a href="#" class="nav__logo">BURGER'S BAR</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Accueil</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">A propos</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contactez nous</a></li>
+
+                    <!-- ************THEME SOMBRE************ -->
+                    <!-- <li>
+                        <i class="bx bx-moon change-theme" id="theme-button" ></i> 
+                    </li> -->
+                </ul>
+            </div>
+
+            <div class="nav__toggle close-modal" id="nav-toggle">
+                <i class="bx bx-menu"></i>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="l-main" role="main">
+
+        <!-- *************************************** HOME ***************************************************** -->
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <h1 class="home__title">Burger's Bar</h1>
+                    <h2 class="home__subtitle">Goûtez nos burger fait maison</h2>
+                    <a href="#" class="button" id="open-modal">Consulter le menu</a>
+                </div>
+
+                <img src="./assets/img/home.png" alt="" class="home__img">
+            </div>
+
+            <!-- ***************** MODAL ***************** -->
+            <div class="modal__container" id="modal-container">
+                <div class="modal__content">
+                    <div class="modal__close close-modal" title="fermer">
+                        <i class="bx bx-x"></i>
+                    </div>
+
+                    <img src="./assets/img/burgerbar__modal.jpg" alt="menu du restaurant" class="modal__img">
+                </div>
+            </div>
+        </section>
+
+        <!-- *************************************** ABOUT ***************************************************** -->
+        <section class="about section bd-container" id="about">
+            <div class="about__container bd-grid">
+                <div class="about__data">
+                    <span class="section-subtitle about__initial">A propos de nous</span>
+                    <h2 class="section-title">Nous cuisinons les meilleurs burger</h2>
+                    <p class="about__description">Des choix d'ingredients d'excellence pour raviver vos papilles. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. Aperiam est voluptate assumenda similique
+                        quaerat magnam, quas pariatur ab ipsam. Dolores laudantium vitae quos, excepturi sunt minus qui
+                        ipsa repellendus error.</p>
+                    <!-- <a href="#" class="button">Nos produits frais</a> -->
+                </div>
+                <img src="./assets/img/about.jpg" alt="" class="about__img">
+            </div>
+        </section>
+
+        <!-- *************************************** MENU ***************************************************** -->
+        <section class="menu section bd-container" id="menu">
+            <span class="section-subtitle">Offre spécial</span>
+            <h2 class="section-title">Menu du moment</h2>
+
+            <div class="menu__container bd-grid">
+                <div class="menu__content">
+                    <img src="./assets/img/plat1.jpg" alt="Menu hamburger et frite numero 1" class="menu__img">
+                    <h3 class="menu__name">burger1</h3>
+                    <span class="menu__detail">description</span>
+                    <span class="menu__price">12€</span>
+                    <!-- <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a> -->
+                </div>
+
+                <div class="menu__content">
+                    <img src="./assets/img/plat2.jpg" alt="Menu hamburger et frite numero 2" class="menu__img">
+                    <h3 class="menu__name">burger2</h3>
+                    <span class="menu__detail">description</span>
+                    <span class="menu__price">15€</span>
+                    <!-- <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a> -->
+                </div>
+
+                <div class="menu__content">
+                    <img src="./assets/img/plat3.jpg" alt="Menu hamburger et frite numero 3" class="menu__img">
+                    <h3 class="menu__name">burger3</h3>
+                    <span class="menu__detail">description</span>
+                    <span class="menu__price">10€</span>
+                    <!-- <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- *************************************** CONTACTEZ NOUS ***************************************************** -->
+        <section class="contact section bd-container" id="contact">
+            <div class="contact__container bd-grid">
+                <div class="contact__data">
+                    <span class="section-subtitle contact__initial">Contact</span>
+                    <h2 class="section-title">Appelez-nous</h2>
+                    <p class="contact__description">Un renseignement? Une réservation ? Une commande ?</p>
+                </div>
+
+                <div class="contact__button">
+                    <a href="tel:+33711223344" class="button">Cliquez ici pour appeler le 07 11 22 33 44</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- *************************************** FOOTER ***************************************************** -->
+    <footer class="footer section  bd-container" role="contentinfo">
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">Burger's bar</a>
+                <span class="footer__description">Restaurant</span>
+
+                <div>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-snapchat'></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Informations</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">FAQ</a></li>
+                    <li><a href="#" class="footer__link">Mentions légales</a></li>
+                    <li><a href="#" class="footer__link">Nous contacter</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Adresse</h3>
+                <ul>
+                    <li>Versailles - France</li>
+                    <li>9 rue du chateau</li>
+                    <li>01 02 03 04</li>
+                    <li>Burgersbar@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2021 MouF</p>
+    </footer>
+
+    <!-- *************************************** SCROLL REVEAL ***************************************************** -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- *************************************** MAIN JS ***************************************************** -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
